@@ -98,7 +98,7 @@ jobs:
         run: ./gradlew :composeApp:assembleDebug
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: androidApp
           path: composeApp/build/outputs/apk/debug
@@ -127,7 +127,7 @@ jobs:
         run: ./gradlew :composeApp:iosArm64Binaries
 
       - name: Upload iOS Framework
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: iosApp
           path: composeApp/build/
@@ -156,7 +156,7 @@ jobs:
         run: ./gradlew :composeApp:createDistributable
 
       - name: Upload Desktop artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: desktopApp
           path: composeApp/build/
